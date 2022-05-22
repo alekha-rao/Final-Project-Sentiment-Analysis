@@ -59,7 +59,7 @@ function draw() {
     allArtists();
 }
 
-// all artists
+// all artists gooo
 function allArtists() {
     let artist = sel.value();
 
