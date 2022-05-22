@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script> -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- my css-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <main>
+
+        <h1>How does the music of the biggest artists of the last two decades differ from one another?</h1>
+
+        <p>For my project, I decided to use a dataframe that had some of the biggest artists from the last couple of decades and there songs and lyrics. I decided to do a deeper dive into specific parts of their music that made them so different from one
+            another. I wanted to figure out what the similarities and differences were of the biggest artists. I learn't alot about what exactly makes popular. </p>
+
+        <p> Firstly, I dove into the words that were used in these songs. I wanted to look at the lexical richness of each artist, and did this by finding the number of unique and total words of each artist. Then I divided the unique by the total and found
+            the lexical richness. This bar chart displays the results.
+        </p>
+        <h2>Popular Artists's Lexical Richness</h2>
+        <div id="myChart"></div>
+
+
+        <p>As seen in this chart, Billie Eilish has the highest Lexical Richness whereas Taylor Swift has the least. But in comparison, taylor Swift has 363 songs total and billie eilish only has a total of 73 songs so it makes sense for taylor swift to
+            less amounts of unique words.Most of the rest of the artists have pretty similar amounts of lexical richness, with an average of around 25%.</p>
+
+        <h2>Popular Artists' Average Words Per Song </h2>
+        <div id="myChart2"></div>
+        <p>As seen in this chart, the average number of words is pretty similar across artists with an average of around 74. The lowest was Billie Eilish with only 51 words which makes sense seeing that most of her songs are quite slow paced. Nicki Minaj
+            was the highest with 122 words per song, making sense because most of her songs are fast paced rap. </p>
+
+        <p>I then decided to dive deeper into sentiment analysis by using a SentimentIntensityAnalyzer that I found for javascript. this took the lyrics and found how much positive, negative and netural sentiment there was in the song and then averaged them
+            out to figure out the dominant sentiment of the song.
+
+
+            <h2>Sentiment Analysis by Artist</h2>
+            <p>Choose the artist you want to see using the drop down menu (the initials are given). Use the sliders to go through an artists discography and see the background change based on the sentiment. If the color is a shade of red, the sentiment of
+                the song is more positive. If it is a shade of blue, the sentiment is more negative. If it is black, the dominant sentiment is neutral. The darker the color is, the more intense of that specifc sentiment it has. </p>
+            <div id="mySketch">
+                <script src="sentiment.js"></script>
+            </div>
+
+
+            <script src="https://d3js.org/d3.v7.min.js"></script>
+
+            <!--javascript-->
+
+            <script src="lexical.js"></script>
+            <script src="wordspersong.js"></script>
+
+
+
+            <!--bootstrap script-->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
