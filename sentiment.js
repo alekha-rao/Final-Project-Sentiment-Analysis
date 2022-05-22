@@ -59,6 +59,7 @@ function draw() {
     allArtists();
 }
 
+// all artists
 function allArtists() {
     let artist = sel.value();
 
